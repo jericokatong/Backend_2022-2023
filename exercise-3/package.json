@@ -1,0 +1,14 @@
+{
+  "name": "exercise-3",
+  "version": "1.0.0",
+  "description": "coba-routing",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "jerico katong",
+  "license": "ISC",
+  "dependencies": {
+    "moment": "^2.29.4"
+  }
+}
