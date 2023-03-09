@@ -29,6 +29,7 @@ const errorHandling = (err, req, res, next) => {
     message: "terjadi kesalahan pada server",
   });
 };
+app.use(errorHandling);
 
 // middleware 404
 app.use((req, res, next) => {
