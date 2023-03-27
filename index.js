@@ -11,6 +11,14 @@ const port = 3000;
 const users = require("./users.js");
 const upload = multer({ dest: "public/" });
 
+// cors
+app.use(
+  cors({
+    origin: "http://127.0.0.1:5500",
+    methods: ["GET", "POST", "PUT", "DELETE"],
+  })
+);
+
 // middleware untuk log dengan morgan
 app.use(morgan("combined"));
 
@@ -20,14 +28,6 @@ app.use(express.json());
 
 // middleware untuk file statik pada folder public
 app.use(express.static(path.join(__dirname, "public")));
-
-// cors
-app.use(
-  cors({
-    origin: "http://127.0.0.1:5500",
-    methods: ["GET", "POST", "PUT", "DELETE"],
-  })
-);
 
 // endpoint list data user
 app.get("/users", (req, res) => {
