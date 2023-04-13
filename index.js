@@ -1,14 +1,12 @@
 const express = require("express");
+// import { MongoClient } from 'mongodb'
+const { MongoClient, ObjectId } = require("mongodb");
 
 const app = express();
 const port = 3000;
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-
-const { MongoClient, ObjectId } = require("mongodb");
-// or as an es module:
-// import { MongoClient } from 'mongodb'
 
 // Connection URL
 const url = "mongodb://localhost:27017";
